@@ -11,15 +11,6 @@ Link to this file in your GitHub repository:
 
 [https://github.com/ondrejdudasek/DE2-Project](https://github.com/ondrejdudasek/DE2-Project)
 
-### Table of contents
-
-* Project objectives
-* Hardware description
-* Libraries description
-* Main application
-* Video
-* References
-
 
 ## Project objectives
 
