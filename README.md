@@ -24,6 +24,8 @@ Link to this file in your GitHub repository:
 
 ## Cíle projektu
 
+Cílem projektu je vytvořit zařízení pro měření výšky hladiny ve vodní nádrži, spouštění čerpadla při dosažení určité výšky hladiny a detekci deště. 
+
 * Měření výšky hladiny ve vodní nádrži
 * Detekce deště
 * Ovládání čerpadla na základě výšky hlaidny
