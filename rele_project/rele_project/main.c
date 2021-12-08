@@ -146,7 +146,7 @@ int main(void) {
  *           
  **********************************************************************/
 
-/* // overflow for display, will be in while probably
+/// overflow for display, will be in while probably
 ISR(TIMER0_OVF_vect) {
     uart_puts("TIM0 disp ovrf/r/n");
 	lcd_gotoxy(5,1);
@@ -155,7 +155,7 @@ ISR(TIMER0_OVF_vect) {
     lcd_putc(3);
 	lcd_gotoxy(15,0);
 	lcd_putc(4);
-}*/
+}
 
 ISR(INT0_vect) {
 	//uart_puts("inside INT0/r/n");
