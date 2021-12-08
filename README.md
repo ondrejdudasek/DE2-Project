@@ -32,9 +32,9 @@ Link to this file in your GitHub repository:
 
 Write your text here.
 
-## Main application
+## Popis softwaru
 
-Write your text here.
+K měření výšky hladiny nádrže se používá ultrazvukový senzor HS-SR40. Poté, co senzor obdrží trigger signál generovaný arduinem o šířce 10 us, je ze senzoru vysláno osm pulzů ultrazvuku a následně přijde echo signál ze senzoru do arduina. Vzdálenost od vodní hladiny se
 
 ![Flowchart](images/Main.drawio.svg)
 
