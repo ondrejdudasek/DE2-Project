@@ -11,6 +11,16 @@ Link to this file in your GitHub repository:
 
 [https://github.com/ondrejdudasek/DE2-Project](https://github.com/ondrejdudasek/DE2-Project)
 
+### Obsah
+
+* [Cíle projektu](#objectives)
+* [Popis hardwaru](#hardware)
+* [Popis knihoven](#libs)
+* [Popis zařízení](#main)
+* [Video](#video)
+* [Reference](#references)
+
+<a name="objectives"></a>
 
 ## Cíle projektu
 
@@ -20,6 +30,7 @@ Link to this file in your GitHub repository:
 * Výdtup na displej - výška hladiny, detekce deště, stav čerpadla
 * Optická signalizace pomocí LED - TOBEDONE
 
+<a name="hardware"></a>
 
 ## Popis hardwaru
 
@@ -27,10 +38,13 @@ Link to this file in your GitHub repository:
 
 ![Schéma zapojení](images/WTC_Scheme.png)
 
+<a name="libs"></a>
 
-## Libraries description
+## Popis knihoven
 
 Write your text here.
+
+<a name="main"></a>
 
 ## Popis zařízení
 
@@ -44,12 +58,15 @@ Výstupem zařízení je LCD displej, na který se vypisuje výška hladiny, sta
 
 ![Flowchart](images/Main.drawio.svg)
 
+<a name="video"></a>
 
 ## Video
 
 Write your text here
 
-## References
+<a name="references"></a>
+
+## Reference
 [Zadání projektu](https://github.com/ondrejdudasek/DE2-Project)
 
 [ATmega328P datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf)
