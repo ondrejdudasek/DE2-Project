@@ -1,6 +1,6 @@
 /**
  * @file platform.h
- * @author Jan Bartoò (you@domain.com)
+ * @author Jan Bartoï¿½ (you@domain.com)
  * @brief 
  * @version 0.1
  * @date 2021-12-08
@@ -59,6 +59,13 @@ void start_measure(void);
  * timer overflow
  */
 void stop_measure(void);
+
+/**
+ * @brief Send 10us high signal on trigger pin
+ * 
+ */
+void trigger_distance_sensor();
+
 
 /**
  * @brief Reads output from the sensor, calculates data
