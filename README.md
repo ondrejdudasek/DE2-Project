@@ -29,15 +29,15 @@ Cílem projektu je vytvořit zařízení pro měření výšky hladiny ve vodní
 
 * Měření výšky hladiny ve vodní nádrži
 * Detekce deště
-* Ovládání čerpadla na základě výšky hlaidny
-* Výdtup na displej - výška hladiny, detekce deště, stav čerpadla
-* Optická signalizace pomocí LED - TOBEDONE
+* Ovládání čerpadla na základě výšky hladiny
+* Výdtup na displej - výška hladiny, detekce deště
+* Optická signalizace pomocí LED - sepnuté nebo vypnuté rele
 
 <a name="hardware"></a>
 
 ## Popis hardwaru
 
-Řídící jednotkou projektu je Arduino UNO. Pro detekci výšky hladiny a deště byl použit ultrazvukový senzor HC-SR04. Ovládání čerpadla zajišťuje NC rele. Optický výstup zajišťuje LCD kyepad shield.
+Řídící jednotkou projektu je Arduino UNO. Pro detekci výšky hladiny a deště byl použit ultrazvukový senzor HC-SR04. Ovládání čerpadla zajišťuje NC rele. Optický výstup zajišťuje LCD kyepad shield a LED u rele.
 
 
 ![Schéma zapojení](images/WTC_Scheme.png)
@@ -58,13 +58,17 @@ K měření výšky hladiny nádrže se používá ultrazvukový senzor HS-SR40.
 
 Detekce deště je opět realizována pomocí ultrazvukového senzoru v závislosti na tom, jestli hladina ve vodní nádrži roste. 
 
-Výstupem zařízení je LCD displej, na který se vypisuje výška hladiny, stav čerpadla a zda prší. 
+Výstupem zařízení je LCD displej, na který se vypisuje výška hladiny a zda prší. Hloubku hladiny, kromě číselné délky signalizuje i symbol nádrže, u něhož se mění výška hladiny. K signalizaci deště dochází pomocí symbolu mraku a kapek na displeji.
 
 ![Flowchart](images/Main.drawio.svg)
 
 <a name="video"></a>
 
 ## Závěr
+
+Podařilo se zapojit a naprogramovat zařízení pro detekci změny hladiny ve vodní nádrži a deště a spínání rele na základě výšky hladiny.
+
+Rozšířením projektu by mohlo být vypisování více informací na displej, jako například stav čerpadla případně intenzita deště. Následně vyrobené zařízení otestovat v reálných podmínkách.
 
 <a name="end"></a>
 
