@@ -84,7 +84,9 @@ Rozšířením projektu by mohlo být vypisování více informací na displej, 
 
 ## Video
 
-Write your text here
+Odkaz na video:
+
+[https://www.youtube.com/watch?v=aKqMvP25aIg&ab_channel=Mat%C4%9BjPodan%C3%BD](https://www.youtube.com/watch?v=aKqMvP25aIg&ab_channel=Mat%C4%9BjPodan%C3%BD)
 
 <a name="references"></a>
 
