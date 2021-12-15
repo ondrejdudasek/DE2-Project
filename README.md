@@ -59,13 +59,15 @@ Cílem projektu je vytvořit zařízení pro měření výšky hladiny ve vodní
 
 ## Popis zařízení
 
-K měření výšky hladiny nádrže se používá ultrazvukový senzor HS-SR40. Poté, co senzor obdrží trigger signál generovaný Arduinem o šířce 10 us, je ze senzoru vysláno osm pulzů ultrazvuku a následně přijde echo signál ze senzoru do arduina. Na základě délky echo signálu lze určit vzdálenost od objektu. Vzdálenost od vodní hladiny se poté přepočítá na výšku hladiny v nádrži. Uvažovaná hloubka nádrže jsou 2 m.
+K měření výšky hladiny nádrže se používá ultrazvukový senzor HC-SR4. Poté, co senzor obdrží trigger signál generovaný Arduinem o šířce 10 us, je ze senzoru vysláno osm pulzů ultrazvuku a následně přijde echo signál ze senzoru do arduina. Na základě délky echo signálu lze určit vzdálenost od objektu. Vzdálenost od vodní hladiny se poté přepočítá na výšku hladiny v nádrži. Uvažovaná hloubka nádrže jsou 2 m.
 
 Čerpadlo se pustí, když je hladina výše jak 190 cm, což znamená 10 cm od senzoru. K sepnutí čerpadla dojde pomocí relé ovládaného Arduinem. K vypnutí relé, řídícího čerpadlo dojde v případě poklesu vodní hladiny na 150 cm, což znamená 50 cm od senzoru.
 
-Detekce deště je opět realizována pomocí ultrazvukového senzoru v závislosti na tom, jestli hladina ve vodní nádrži roste. 
+Detekce deště je opět realizována pomocí ultrazvukového senzoru v závislosti na tom, jestli hladina ve vodní nádrži roste. Vzhledem k přesnosti senzoru je povolená změna o jeden centimetr. 
 
 Výstupem zařízení je LCD displej, na který se vypisuje výška hladiny a zda prší. Hloubku hladiny, kromě číselné délky, signalizuje i symbol nádrže, u něhož se mění výška hladiny. K signalizaci deště dochází pomocí symbolu mraku a kapek na displeji.
+
+Zařízení aktualizuje hodnoty jednou za minutu. 
 
 ![Flowchart](images/Main.drawio.svg)
 
