@@ -31,7 +31,6 @@ Cílem projektu je vytvořit zařízení pro měření výšky hladiny ve vodní
 * Detekce deště
 * Ovládání čerpadla na základě výšky hladiny
 * Výstup na displej - výška hladiny, detekce deště
-* Optická signalizace pomocí LED - sepnuté nebo vypnuté relé
 
 <a name="hardware"></a>
 
