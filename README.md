@@ -47,6 +47,7 @@ Cílem projektu je vytvořit zařízení pro měření výšky hladiny ve vodní
 
 * avr/io.h - knihovna pro práci s mikrokontrolérem
 * avr/interrupt - knihovna pro práci s přerušeními
+* platform.h - abstrakční vrstva projektu, zpřehledňuje hlavní kód
 * stdlib.h - obecná knihovna jazyka C
 * util/delay - knihovna pro pozastavení programu na určitý čas
 * timer.h - knihovna pro práci s časovači
