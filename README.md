@@ -7,7 +7,7 @@
 * Daniel Havránek
 * Matěj Podaný
 
-Link to this file in your GitHub repository:
+Odkaz na GitHub repozitář s projektem:
 
 [https://github.com/ondrejdudasek/DE2-Project](https://github.com/ondrejdudasek/DE2-Project)
 
@@ -17,6 +17,7 @@ Link to this file in your GitHub repository:
 * [Popis hardwaru](#hardware)
 * [Popis knihoven](#libs)
 * [Popis zařízení](#main)
+* [Závěr](#end)
 * [Video](#video)
 * [Reference](#references)
 
@@ -61,6 +62,10 @@ Výstupem zařízení je LCD displej, na který se vypisuje výška hladiny, sta
 ![Flowchart](images/Main.drawio.svg)
 
 <a name="video"></a>
+
+## Závěr
+
+<a name="end"></a>
 
 ## Video
 
