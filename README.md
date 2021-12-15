@@ -7,7 +7,7 @@
 * Daniel Havránek
 * Matěj Podaný
 
-Link to this file in your GitHub repository:
+Odkaz na GitHub repozitář s projektem:
 
 [https://github.com/ondrejdudasek/DE2-Project](https://github.com/ondrejdudasek/DE2-Project)
 
@@ -22,6 +22,15 @@ Link to this file in your GitHub repository:
   - [Popis zařízení](#popis-zařízení)
   - [Video](#video)
   - [Reference](#reference)
+=======
+* [Cíle projektu](#objectives)
+* [Popis hardwaru](#hardware)
+* [Popis knihoven](#libs)
+* [Popis zařízení](#main)
+* [Závěr](#end)
+* [Video](#video)
+* [Reference](#references)
+>>>>>>> d02c298ded9e55210f18d8ec443df175e4eb4f6b
 
 <a name="objectives"></a>
 
@@ -40,6 +49,9 @@ Cílem projektu je vytvořit zařízení pro měření výšky hladiny ve vodní
 ## Popis hardwaru
 
 Řídící jednotkou projektu je Arduino UNO. Pro detekci výšky hladiny byl použit ultrazvukový senzor HC-SR04. Ovládání čerpadla zajišťuje NC rele. Optický výstup zajišťuje vícebarevná LED a LCD kyepad shield.
+=======
+Řídící jednotkou projektu je Arduino UNO. Pro detekci výšky hladiny a deště byl použit ultrazvukový senzor HC-SR04. Ovládání čerpadla zajišťuje NC rele. Optický výstup zajišťuje LCD kyepad shield.
+>>>>>>> d02c298ded9e55210f18d8ec443df175e4eb4f6b
 
 ![Schéma zapojení](images/WTC_Scheme.png)
 
@@ -55,7 +67,7 @@ Write your text here.
 
 K měření výšky hladiny nádrže se používá ultrazvukový senzor HS-SR40. Poté, co senzor obdrží trigger signál generovaný arduinem o šířce 10 us, je ze senzoru vysláno osm pulzů ultrazvuku a následně přijde echo signál ze senzoru do arduina. Na základě délky echo signálu lze určit vzdálenost od objektu. Vzdálenost od vodní hladiny se poté přepočítá na výšku hladiny v nádrži. Uvažovaná hloubka nádrže jsou 2 m.
 
-Čerpadlo se pustí když je hladina výš, jak 190 cm, což znamená 10 cm od senzoru. K sepnutí čerpadla dojde pomocí rele ovládaného arduinem. 
+Čerpadlo se pustí, když je hladina výš jak 190 cm, což znamená 10 cm od senzoru. K sepnutí čerpadla dojde pomocí rele ovládaného arduinem. K vypnutí rele řídícího čerpadlo dojde v případě poklesu vodní hladiny na 150 cm, což znamená 50 cm od senzoru.
 
 Detekce deště je opět realizována pomocí ultrazvukového senzoru v závislosti na tom, jestli hladina ve vodní nádrži roste. 
 
@@ -64,6 +76,10 @@ Výstupem zařízení je LCD displej, na který se vypisuje výška hladiny, sta
 ![Flowchart](images/Main.drawio.svg)
 
 <a name="video"></a>
+
+## Závěr
+
+<a name="end"></a>
 
 ## Video
 
