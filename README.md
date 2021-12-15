@@ -20,7 +20,6 @@ Odkaz na GitHub repozitář s projektem:
 * [Závěr](#end)
 * [Video](#video)
 * [Reference](#references)
->>>>>>> d02c298ded9e55210f18d8ec443df175e4eb4f6b
 
 <a name="objectives"></a>
 
