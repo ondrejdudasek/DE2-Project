@@ -36,7 +36,7 @@ Cílem projektu je vytvořit zařízení pro měření výšky hladiny ve vodní
 
 ## Popis hardwaru
 
-Řídící jednotkou projektu je Arduino UNO. Pro detekci výšky hladiny a deště byl použit ultrazvukový senzor HC-SR04. Ovládání čerpadla zajišťuje NC relé. Optický výstup zajišťuje LCD kyepad shield a LED u relé.
+Řídící jednotkou projektu je Arduino UNO. Pro detekci výšky hladiny a deště byl použit ultrazvukový senzor HC-SR04. Ovládání čerpadla zajišťuje NC relé. Optický výstup zajišťuje LCD keypad shield a LED u relé.
 
 
 ![Schéma zapojení](images/WTC_Scheme.png)
@@ -45,7 +45,15 @@ Cílem projektu je vytvořit zařízení pro měření výšky hladiny ve vodní
 
 ## Popis knihoven
 
-Write your text here.
+* avr/io.h - knihovna pro práci s mikrokontrolérem
+* avr/interrupt - knihovna pro práci s přerušeními
+* stdlib.h - obecná knihovna jazyka C
+* util/delay - knihovna pro pozastavení programu na určitý čas
+* timer.h - knihovna pro práci s časovači
+* lcd.h - knihovna pro práci s LCD displejem
+* lcd_definitons.h - definice pro knihovnu lcd.h
+* gpio.h - knihovna pro práci se vstupy a výstupy
+* uart.h - knihovna pro práci s komunikačním rozhraním UART
 
 <a name="main"></a>
 
