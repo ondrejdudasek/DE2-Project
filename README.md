@@ -30,14 +30,14 @@ Cílem projektu je vytvořit zařízení pro měření výšky hladiny ve vodní
 * Měření výšky hladiny ve vodní nádrži
 * Detekce deště
 * Ovládání čerpadla na základě výšky hladiny
-* Výdtup na displej - výška hladiny, detekce deště
-* Optická signalizace pomocí LED - sepnuté nebo vypnuté rele
+* Výstup na displej - výška hladiny, detekce deště
+* Optická signalizace pomocí LED - sepnuté nebo vypnuté relé
 
 <a name="hardware"></a>
 
 ## Popis hardwaru
 
-Řídící jednotkou projektu je Arduino UNO. Pro detekci výšky hladiny a deště byl použit ultrazvukový senzor HC-SR04. Ovládání čerpadla zajišťuje NC rele. Optický výstup zajišťuje LCD kyepad shield a LED u rele.
+Řídící jednotkou projektu je Arduino UNO. Pro detekci výšky hladiny a deště byl použit ultrazvukový senzor HC-SR04. Ovládání čerpadla zajišťuje NC relé. Optický výstup zajišťuje LCD kyepad shield a LED u relé.
 
 
 ![Schéma zapojení](images/WTC_Scheme.png)
@@ -52,9 +52,9 @@ Write your text here.
 
 ## Popis zařízení
 
-K měření výšky hladiny nádrže se používá ultrazvukový senzor HS-SR40. Poté, co senzor obdrží trigger signál generovaný arduinem o šířce 10 us, je ze senzoru vysláno osm pulzů ultrazvuku a následně přijde echo signál ze senzoru do arduina. Na základě délky echo signálu lze určit vzdálenost od objektu. Vzdálenost od vodní hladiny se poté přepočítá na výšku hladiny v nádrži. Uvažovaná hloubka nádrže jsou 2 m.
+K měření výšky hladiny nádrže se používá ultrazvukový senzor HS-SR40. Poté, co senzor obdrží trigger signál generovaný Arduinem o šířce 10 us, je ze senzoru vysláno osm pulzů ultrazvuku a následně přijde echo signál ze senzoru do arduina. Na základě délky echo signálu lze určit vzdálenost od objektu. Vzdálenost od vodní hladiny se poté přepočítá na výšku hladiny v nádrži. Uvažovaná hloubka nádrže jsou 2 m.
 
-Čerpadlo se pustí, když je hladina výš jak 190 cm, což znamená 10 cm od senzoru. K sepnutí čerpadla dojde pomocí rele ovládaného arduinem. K vypnutí rele řídícího čerpadlo dojde v případě poklesu vodní hladiny na 150 cm, což znamená 50 cm od senzoru.
+Čerpadlo se pustí, když je hladina výše jak 190 cm, což znamená 10 cm od senzoru. K sepnutí čerpadla dojde pomocí relé ovládaného Arduinem. K vypnutí relé, řídícího čerpadlo dojde v případě poklesu vodní hladiny na 150 cm, což znamená 50 cm od senzoru.
 
 Detekce deště je opět realizována pomocí ultrazvukového senzoru v závislosti na tom, jestli hladina ve vodní nádrži roste. 
 
