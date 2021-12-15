@@ -11,14 +11,14 @@
 int main(void)
 {
     setup_platform();
-    GPIO_toggle(&DDRB, PB5);
+
     LOG("Init done");
     LOG("Enabling interrupts");
-    //sei();
+    sei();
+            
     LOG("Interrupts enabled, going into loop");
-    while(1){
-        
-    }
+    while (1);
+    
 }
 
 
@@ -33,10 +33,11 @@ ISR(INT0_vect)
     static uint8_t is_measuring = 0;
     if(!is_measuring)
     {
+        //LOG("Sensor interrupt - begin measure");
         // Reset and activate measuring timer
         start_measure();
         is_measuring = 1;
-        LOG("Sensor interrupt - begin measure");
+        
     } else {
         // Stop measuring timer
         stop_measure();
@@ -44,7 +45,7 @@ ISR(INT0_vect)
         // And possibly evaluate 
         update_values();
         update_LCD();
-        LOG("Sensor interrupt - end measure");
+        //LOG("Sensor interrupt - end measure");
         is_measuring = 0;
     }
 }
@@ -56,21 +57,25 @@ ISR(INT0_vect)
  */
 ISR(TIMER0_OVF_vect)
 {
-    // One second passed (this is not very precise,
-    // it takes 1048ms to overflow TIM0)
-    GPIO_toggle(&DDRB, PB5);
-
+    static uint8_t prescale = 0;
     static uint8_t seconds = 0;
-    seconds ++;
-    if(seconds >= 2)
+    prescale ++;
+    if(prescale >= 250)
     {
-        // Trigger distance measurement once per minute
-        trigger_distance_sensor();
-        LOG("Distance sensor triggered");
-        seconds = 0;
-    } else {
-        LOG(".");
+        prescale = 0;
+        seconds ++;
+        GPIO_toggle(&DDRB, PB5);
+        if(seconds >= 2)
+        {
+            // Trigger distance measurement once per minute
+            trigger_distance_sensor();
+            LOG("Distance sensor triggered");
+            seconds = 0;
+        } else {
+            //LOG(".");
+        }
     }
+    
 }
 
 /**
@@ -78,6 +83,7 @@ ISR(TIMER0_OVF_vect)
  */
 ISR(TIMER1_OVF_vect)
 {
+    
     // stop timer and write error message to LCD
     stop_measure();
     update_LCD_error();
