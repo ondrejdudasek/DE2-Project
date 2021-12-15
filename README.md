@@ -58,7 +58,7 @@ K měření výšky hladiny nádrže se používá ultrazvukový senzor HS-SR40.
 
 Detekce deště je opět realizována pomocí ultrazvukového senzoru v závislosti na tom, jestli hladina ve vodní nádrži roste. 
 
-Výstupem zařízení je LCD displej, na který se vypisuje výška hladiny a zda prší. Hloubku hladiny, kromě číselné délky signalizuje i symbol nádrže, u něhož se mění výška hladiny. K signalizaci deště dochází pomocí symbolu mraku a kapek na displeji.
+Výstupem zařízení je LCD displej, na který se vypisuje výška hladiny a zda prší. Hloubku hladiny, kromě číselné délky, signalizuje i symbol nádrže, u něhož se mění výška hladiny. K signalizaci deště dochází pomocí symbolu mraku a kapek na displeji.
 
 ![Flowchart](images/Main.drawio.svg)
 
@@ -68,7 +68,7 @@ Výstupem zařízení je LCD displej, na který se vypisuje výška hladiny a zd
 
 Podařilo se zapojit a naprogramovat zařízení pro detekci změny hladiny ve vodní nádrži a deště a spínání rele na základě výšky hladiny.
 
-Rozšířením projektu by mohlo být vypisování více informací na displej, jako například stav čerpadla případně intenzita deště. Následně vyrobené zařízení otestovat v reálných podmínkách.
+Rozšířením projektu by mohlo být vypisování více informací na displej, jako například stav čerpadla případně intenzita deště. Bylo by vhodné vyrobené zařízení otestovat v reálných podmínkách.
 
 <a name="end"></a>
 
