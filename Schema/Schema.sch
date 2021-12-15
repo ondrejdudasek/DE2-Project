@@ -36,39 +36,6 @@ F 3 "~" H 7100 2350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED_Dual_AACC D1
-U 1 1 61B0CE20
-P 4700 4350
-F 0 "D1" H 4700 4775 50  0000 C CNN
-F 1 "LED_Dual_AACC" H 4700 4684 50  0000 C CNN
-F 2 "" H 4730 4350 50  0001 C CNN
-F 3 "~" H 4730 4350 50  0001 C CNN
-	1    4700 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 61B0DC3A
-P 3950 4250
-F 0 "R2" V 3743 4250 50  0000 C CNN
-F 1 "330R" V 3834 4250 50  0000 C CNN
-F 2 "" V 3880 4250 50  0001 C CNN
-F 3 "~" H 3950 4250 50  0001 C CNN
-	1    3950 4250
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 61B0E493
-P 3950 4450
-F 0 "R3" V 4150 4450 50  0000 C CNN
-F 1 "330R" V 4050 4450 50  0000 C CNN
-F 2 "" V 3880 4450 50  0001 C CNN
-F 3 "~" H 3950 4450 50  0001 C CNN
-	1    3950 4450
-	0    1    1    0   
-$EndComp
-$Comp
 L ArduinoLCD:DS1 LCD1
 U 1 1 61B10BE2
 P 4350 2200
@@ -363,46 +330,6 @@ Text GLabel 1350 3950 0    50   Input ~ 0
 IN1
 Wire Wire Line
 	1700 3950 1350 3950
-Text GLabel 1350 3750 0    50   Input ~ 0
-LED_R
-Text GLabel 1350 3850 0    50   Input ~ 0
-LED_G
-Wire Wire Line
-	1350 3850 1700 3850
-Wire Wire Line
-	1700 3750 1350 3750
-Text GLabel 3650 4250 0    50   Input ~ 0
-LED_R
-Text GLabel 3650 4450 0    50   Input ~ 0
-LED_G
-$Comp
-L power:GND #PWR012
-U 1 1 61B7273E
-P 5300 4500
-F 0 "#PWR012" H 5300 4250 50  0001 C CNN
-F 1 "GND" H 5305 4327 50  0000 C CNN
-F 2 "" H 5300 4500 50  0001 C CNN
-F 3 "" H 5300 4500 50  0001 C CNN
-	1    5300 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3650 4250 3800 4250
-Wire Wire Line
-	3650 4450 3800 4450
-Wire Wire Line
-	4100 4250 4400 4250
-Wire Wire Line
-	4100 4450 4400 4450
-Wire Wire Line
-	5000 4250 5300 4250
-Wire Wire Line
-	5300 4250 5300 4450
-Wire Wire Line
-	5000 4450 5300 4450
-Connection ~ 5300 4450
-Wire Wire Line
-	5300 4450 5300 4500
 $Comp
 L power:GND #PWR013
 U 1 1 61B79378
