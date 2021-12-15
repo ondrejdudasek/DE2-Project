@@ -1,4 +1,14 @@
 
+/**
+ * @file main.c
+ * @author Ondrej Dudasek (221100@vutbr.cz)
+ * @brief Main file of project
+ * @version 1.0
+ * @date 2021-12-15
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #include <inttypes.h>
 #include <avr/interrupt.h>
@@ -57,14 +67,14 @@ ISR(INT0_vect)
  */
 ISR(TIMER0_OVF_vect)
 {
-    static uint8_t prescale = 0;
-    static uint8_t seconds = 0;
+    static uint8_t prescale = 249;
+    static uint8_t seconds = 59;
     prescale ++;
-    if(prescale >= 250)
+    if(prescale >= 250) //prescale 4ms interrupt
     {
         prescale = 0;
         seconds ++;
-        GPIO_toggle(&DDRB, PB5);
+        GPIO_toggle(&DDRB, PB5);    // 1s blink onboard led
         if(seconds >= 2)
         {
             // Trigger distance measurement once per minute

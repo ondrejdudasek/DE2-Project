@@ -108,9 +108,11 @@ void setup_platform()
 void is_raining(uint16_t length)
 {
 	static uint16_t previous_length = 0;
-	if (length + 1 < previous_length )
+	// Change of 1cm is allowed without being marked as rain
+	if (length + 1 < previous_length )	
 	{
 		raining = 1;
+		LOG("Rain detected");
 	}
 	else
 	{
@@ -118,32 +120,33 @@ void is_raining(uint16_t length)
 	}
 
 	previous_length = length;
-	LOG("Rain detected");
+	
 }
 
 void start_measure()
 {
-	TCNT1 = 0;
-	TIM1_overflow_33ms();
+	TCNT1 = 0;	// zero out counter for measurement
+	TIM1_overflow_33ms();	// HC-SR04 can send impulses up to about 23ms
 }
 
 void stop_measure()
 {
-	TIM1_stop();
+	TIM1_stop();	// stop timer
 }
 
 
 void update_values()
 {
-	pulse_length = TCNT1;
-	length = pulse_length * 0.008325; // number of edges * prescaler (8) / FCPU * speed of sound (333ms-1) / 2 (travels the distance twice)
+	pulse_length = TCNT1;	// read measured time
+	// number of edges * prescaler (8) / FCPU * speed of sound (333ms-1) / 2 (travels the distance twice)
+	length = pulse_length * 0.008325; 
 	is_raining(length);
 
-	//char level_s[] = "%03d";
-	//sprintf(&level_s[0], "%03d", TANK_DEPTH - length);
-	//uart_puts("Water level: ");
-	//uart_puts(&level_s[0]);
-	//LOG("cm"); 
+	char level_s[] = "%03d";
+	sprintf(&level_s[0], "%03d", TANK_DEPTH - length);
+	uart_puts("Water level: ");
+	uart_puts(&level_s[0]);
+	LOG("cm"); 
 
 	pump_state_control();
 }
