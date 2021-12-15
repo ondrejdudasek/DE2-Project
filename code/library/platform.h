@@ -85,5 +85,23 @@ void pump_state_control();
  */
 void is_raining(uint16_t length);
 
+/**
+ * @brief Set i
+ * 
+ */
+void set_LED_ON(void);
+
+/**
+ * @brief Set led off
+ * 
+ */
+void set_LED_OFF(void);
+
+
+/**
+ * @brief Send log message to uart
+ * 
+ */
+void LOG(const char *string);
 
 #endif // LIBRARY_PLATFORM

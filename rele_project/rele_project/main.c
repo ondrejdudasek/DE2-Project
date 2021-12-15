@@ -88,7 +88,7 @@ uint8_t customChar[40] = {
 int main(void) {
 	
 	GPIO_config_output(&DDRD, trig);
-	GPIO_write_low(&PORTD, trig);
+	GPIO_write_low(&DDRD, trig);
 	GPIO_config_input_nopull(&DDRD, echo);
 	GPIO_config_output(&DDRB, PB5);
 	

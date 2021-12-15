@@ -1,9 +1,8 @@
-/*
- * platform.c
- *
- * Created: 08.12.2021 15:41:01
- *  Author: Honza
- */ 
+/**
+ * @file platform.c
+ * @brief Project hardware abstraction layer library
+ * @author Jan Bartoň
+ **/
 
 #include "platform.h"
 
@@ -81,6 +80,7 @@ void setup_platform()
 	lcd_command(1 << LCD_DDRAM);
 	
 	// configure pins
+	GPIO_config_output(&DDRB, PB5);
 	GPIO_config_output(&DDRD, trig_pin);
 	GPIO_write_low(&PORTD, trig_pin);
 	GPIO_config_input_nopull(&DDRD, echo_pin);
@@ -88,7 +88,7 @@ void setup_platform()
 	GPIO_write_high(&PORTB, relay_pin);
 	
 	// Interrupt for display
-	TIM0_overflow_262ms();
+	TIM0_overflow_1s();
 	TIM0_overflow_interrupt_enable();
 	
 	// enable external interrupt to any logical change (datasheet page 80)
@@ -96,8 +96,10 @@ void setup_platform()
 	EICRA |= (1<<ISC00);
 	EICRA &= ~(1<<ISC01);
 
+	uart_init(UART_BAUD_SELECT(9600, F_CPU));
+
 	// Enables interrupts by setting the global interrupt mask
-	sei();
+	//sei();
 }
 void is_raining(uint16_t length)
 {
@@ -197,4 +199,15 @@ void pump_state_control()
 		GPIO_write_high(&PORTB, relay_pin);
 		pump_running = 0;
 	}
+}
+
+/**
+ * @brief Logging function, can be modified for multiple outputs
+ * 
+ * @param string - Log message
+ */
+void LOG(const char *string)
+{
+	uart_puts(string);
+	uart_putc('\n');
 }

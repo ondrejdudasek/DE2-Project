@@ -13,12 +13,15 @@ Link to this file in your GitHub repository:
 
 ### Obsah
 
-* [Cíle projektu](#objectives)
-* [Popis hardwaru](#hardware)
-* [Popis knihoven](#libs)
-* [Popis zařízení](#main)
-* [Video](#video)
-* [Reference](#references)
+- [Měření výšky vodní hladiny v nádrži](#měření-výšky-vodní-hladiny-v-nádrži)
+    - [Členové týmu](#členové-týmu)
+    - [Obsah](#obsah)
+  - [Cíle projektu](#cíle-projektu)
+  - [Popis hardwaru](#popis-hardwaru)
+  - [Popis knihoven](#popis-knihoven)
+  - [Popis zařízení](#popis-zařízení)
+  - [Video](#video)
+  - [Reference](#reference)
 
 <a name="objectives"></a>
 
@@ -36,7 +39,7 @@ Cílem projektu je vytvořit zařízení pro měření výšky hladiny ve vodní
 
 ## Popis hardwaru
 
-Řídící jednotkou projektu je Arduino UNO. Pro detekci výšky hladiny byl použit ultrazvukový senzor HC-SR04. Ovládání čerpadla zajišťuje NC rele. Optický výstup zajišťuje výcebarvná LED a LCD kyepad shield.
+Řídící jednotkou projektu je Arduino UNO. Pro detekci výšky hladiny byl použit ultrazvukový senzor HC-SR04. Ovládání čerpadla zajišťuje NC rele. Optický výstup zajišťuje vícebarevná LED a LCD kyepad shield.
 
 ![Schéma zapojení](images/WTC_Scheme.png)
 
