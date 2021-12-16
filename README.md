@@ -2,14 +2,22 @@
 
 ### Členové týmu
 
-* Jan Bartoň
-* Ondřej Dudášek
-* Daniel Havránek
-* Matěj Podaný
+* Jan Bartoň (programování, readme)
+* Ondřej Dudášek (programování, readme, flowchart)
+* Daniel Havránek (programování, readme, schéma zapojení)
+* Matěj Podaný (programování, video)
 
 Odkaz na GitHub repozitář s projektem:
 
 [https://github.com/ondrejdudasek/DE2-Project](https://github.com/ondrejdudasek/DE2-Project)
+
+Odkaz na hlavní `main.c` soubor:
+
+[https://github.com/ondrejdudasek/DE2-Project/blob/main/code/main.c](https://github.com/ondrejdudasek/DE2-Project/blob/main/code/main.c)
+
+Odkaz na `.hex` soubor:
+
+[https://github.com/ondrejdudasek/DE2-Project/blob/main/code/project.hex](https://github.com/ondrejdudasek/DE2-Project/blob/main/code/project.hex)
 
 ### Obsah
 
